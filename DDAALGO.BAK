@@ -63,7 +63,7 @@ int main()
     cin>>xb;
     cout<<" Enter yB : ";
     cin>>yb; */
-    int arr[] = {1,1,1,0,0,0};
+    int arr[] = {1,0,0,0};
     dda(100,100,400,400,arr,sizeof(arr)-1);
     cout<<sizeof(arr);
     getch();
