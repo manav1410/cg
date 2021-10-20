@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<graphics.h>
+void drawc(int xc, int yc,int x, int y,int clr)
+{
+	putpixel(xc+x,yc+y,clr);
+	putpixel(xc-x,yc+y,clr);
+	putpixel(xc-x,yc-y,clr);
+	putpixel(xc+x,yc-y,clr);
+	putpixel(xc+y,yc+x,clr);
+	putpixel(xc-y,yc+x,clr);
+	putpixel(xc-y,yc-x,clr);
+	putpixel(xc+y,yc-x,clr);
+}
+void mid(int xc, int yc, int r,int clr)
+{
+	int x,y,p;
+	x=0,y=r,p=1-r;
+	drawc(xc,yc,x,y,clr);
+	while(x<y)
+	{
+		x++;
+		if(p<0)
+			p+=2*x+1;
+		else
+		{
+			y--;
+			p+=2*(x-y)+1;
+		}
+		drawc(xc,yc,x,y,clr);
+	}
+}
+void main()
+{
+	int gdriver = DETECT,gmode;
+	initgraph(&gdriver,&gmode,"C:\\TURBOC3\\BGI");
+	mid(100,100,50);
+getch();
+}

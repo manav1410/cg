@@ -20,7 +20,7 @@ Github : https://github.com/manaviyu
 #include<graphics.h>
 #include<conio.h>
 #include<stdlib.h>
-#include"C:/TURBOC3/BIN/BRESN.C"
+#include"BRESN.C"
 #define round(a) (int)(a+0.5)
 #define dfSize 25
 //global variables.
